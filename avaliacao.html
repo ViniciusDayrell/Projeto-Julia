@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avaliação</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
     <header id="cabecalho">
         <h1>Bem vindo ao Catálogo</h1>
@@ -20,44 +22,53 @@
     </header>
 
     <main>
-        <form action="">
-            <div>
-                <label for="nome">Nome:</label><br>
-                <input type="text" id="nome"><br><br>
-            </div>
-            
-            <div>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email"><br><br>
-            </div>
+        <section class="container-form">
 
-            <div>
-                <label for="mensagem">Comentário:</label><br>
-                <textarea name="mensagem" id="mensagem" rows="10"></textarea>
-            </div>
-            <br>
-            <div>
-                <label for="satisfacao">Satisfação:</label><br>
-                <select name="satisfacao" id="satisfacao">
-                    <option value="">selecione</option>
-                    <option value="1">Muito insatisfeito</option>
-                    <option value="2">Insatisfeito</option>
-                    <option value="3">Regular</option>
-                    <option value="4">Satisfeito</option>
-                    <option value="5">Muito satisfeito</option>                    
-                </select>                
-            </div>
-            <br>
-            <div>
-                <input type="submit" value="Enviar">
-            </div>
-        </form>
-        
+            <form action="" id="form">
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome">
+                </div>
+
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email">
+                </div>
+
+                <div>
+                    <label for="mensagem">Comentário:</label>
+                    <textarea name="mensagem" id="mensagem" rows="10"></textarea>
+                </div>
+                
+                <div>
+                    <label for="satisfacao">Satisfação:</label>
+                    <select name="satisfacao" id="satisfacao">
+                        <option value="">selecione</option>
+                        <option value="1">Muito insatisfeito</option>
+                        <option value="2">Insatisfeito</option>
+                        <option value="3">Regular</option>
+                        <option value="4">Satisfeito</option>
+                        <option value="5">Muito satisfeito</option>
+                    </select>
+                </div>
+               
+                <div>
+                    <input class="botao" type="submit" value="Enviar">
+                </div>
+            </form>
+
+        </section>
+
+        <div id="lista-comentarios"></div>
+
     </main>
 
     <footer>
         <p>&copy; Catálogo de Vendas - Julia Girotto</p>
     </footer>
-    
+
+    <script src="./js/script.js"></script>
+
 </body>
+
 </html>

@@ -41,7 +41,7 @@ footer p {
     background: rgba(214, 180, 164, 0.6);
     backdrop-filter: blur(8px);
     padding: 12px 0;
-    border-top: 1px solid rgb(214, 180, 164);
+    border-top: 1px solid #d6b4a4;
 }
 
 #nav-bar ul {
@@ -132,4 +132,56 @@ footer p {
 .titulo-h2 {
     border-bottom: 2px solid #d6b4a4;
     padding: 5px;
+}
+
+/*estilos para o formulario*/
+
+.container-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+#form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+#form input, 
+#form textarea,
+#form select {
+    outline: unset;
+    padding: 10px;
+    min-width: 300px;
+    border: 1px solid #d6b4a4;
+    border-radius: 10px;
+}
+
+#form label {
+    padding-left: 8px;
+}
+
+#form input:focus, 
+#form textarea:focus,
+#form select:focus {
+    background-color: #f3e9e2;
+}
+
+.botao {
+    background: linear-gradient(to top, tomato, #d6b4a4 );
+    border: none;
+    padding: 12px 30px;
+    cursor: pointer;
+
+    font-weight: 800;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.botao:hover {
+    transform: translateY(3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
 }
