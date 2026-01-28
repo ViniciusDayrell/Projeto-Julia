@@ -185,3 +185,135 @@ footer p {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 
 }
+
+/*ESTILO PARA CARD DE COMENTARIO*/
+
+.comentario-card {
+    width: 85%;
+    max-width: 750px;
+    margin: 25px auto;
+    background: #ffffff;
+    padding: 22px 26px;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: aparecer 0.45s ease forwards;
+}
+
+@keyframes aparecer {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.removendo {
+    animation: sumir 0.35s ease forwards;
+}
+
+@keyframes sumir {
+    to{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/*TOPO DO CARD*/
+
+.info-top {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom, #d6b4a4, tomato);
+    color: white;
+
+    font-weight: bold;
+    font-size: 22px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 4px 12px rgba(255, 41, 117, 0.5);
+
+}
+
+.nome-data {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome-data span:first-child{
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.nome-data span:last-child{
+    font-size: 13px;
+    color: #777;
+}
+
+/*TEXTO DOP COMENTARIO*/
+
+.texto-comentario {
+    margin: 18px 0;
+    font-size: 16px;
+    color: #333;
+    line-height: 1.5;
+}
+
+/*ACOES DO CARD*/
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.actions button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #555;
+    font-size: 15px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: all 0.5s ease;
+    
+}
+
+.actions button:hover {
+    background: linear-gradient(to bottom, #d6b4a4, tomato);
+    color: white;
+
+}
+
+/*RESPONSIVIDADE*/
+
+@media (max-width: 550px){
+    .comentario-card{
+        width: 93%;
+        padding: 18px;
+    }
+
+    .avatar{
+        width: 42px;
+        height: 42px;
+        font-size: 18px
+    }
+
+    .texto-comentario{
+        font-size: 14px;
+    }
+
+    .actions button {
+        font-size: 13px;
+    }
+}
